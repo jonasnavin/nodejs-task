@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "814ac217-9fc1-40ff-b69f-2db924d056d0",
+		"name": "Nodejs-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40567465"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get-users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "get-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/users/67ab9614b55440324d0bfd50"
+					},
+					"response": []
+				},
+				{
+					"name": "add-user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"\", // Enter \"admin\" or \"user\"\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/users/add-user"
+					},
+					"response": []
+				},
+				{
+					"name": "update-user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"\", // Enter \"admin\" or \"user\"\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"\",\r\n    \"email\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/users/update/67acb4ccd00616e3e1109b53"
+					},
+					"response": []
+				},
+				{
+					"name": "remove-user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/users/remove/67acb3313d313ad874a330ac"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profiles",
+			"item": [
+				{
+					"name": "get-profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/profiles"
+					},
+					"response": []
+				},
+				{
+					"name": "add-profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"67acf473fa1b78c33a361f8a\",\r\n    \"profile_info\": \"Designer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/profiles/add-profile"
+					},
+					"response": []
+				},
+				{
+					"name": "update-profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"\",\r\n    \"profile_info\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/profiles/update/67acb599d00616e3e1109b58"
+					},
+					"response": []
+				},
+				{
+					"name": "remove-profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"67aade0b763d729b4176ba49\",\r\n    \"profile_info\": \"Software Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/profiles/remove/67ab02f8b399885278f1aa75"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "enquiries",
+			"item": [
+				{
+					"name": "get-enquiries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/enquiries"
+					},
+					"response": []
+				},
+				{
+					"name": "get-enquiry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/enquiries/67ab0abcf0d90f595ac781ae"
+					},
+					"response": []
+				},
+				{
+					"name": "add-enquiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/enquiries/add-enquiry"
+					},
+					"response": []
+				},
+				{
+					"name": "update-enquiry",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/enquiries/update/67ab0abcf0d90f595ac781ae"
+					},
+					"response": []
+				},
+				{
+					"name": "remove-enquiry",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"67aade0b763d729b4176ba49\",\r\n    \"teams\": [\"67ab047d4d8492607fc6ec4f\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/enquiries/remove/67ace367fc5ba6234cc6b6a3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"item": [
+				{
+					"name": "search-users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/search/users?query=search_text",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search",
+								"users"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "search_text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-profiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/search/profiles?query=search_text",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search",
+								"profiles"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "search_text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/search/all?query=search_text",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"search",
+								"all"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "search_text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "enquiryTeams",
+			"item": [
+				{
+					"name": "get-enquiry-teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/api/enquiry/67acf581fa1b78c33a361fa5"
+					},
+					"response": []
+				},
+				{
+					"name": "add-enquiry-teams",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"\",\r\n    \"role\": \"\" // Enter \"member\" or \"leader\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/enquiry/67ad186316c4dc688db95955/teams/"
+					},
+					"response": []
+				},
+				{
+					"name": "update-enquiry-teams-user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"\" // Enter \"pendind\", \"approved\" or \"rejected\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/enquiry/67ad186316c4dc688db95955/teams/67acf473fa1b78c33a361f8a"
+					},
+					"response": []
+				},
+				{
+					"name": "update-enquiry-teams-user Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:5000/api/enquiry/67acf691fa1b78c33a361fa9/teams/67acf473fa1b78c33a361f8a"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "typesense",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-typesense-api-key",
+						"value": "type_sense_api_key_",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8108/collections"
+			},
+			"response": []
+		}
+	]
+}
