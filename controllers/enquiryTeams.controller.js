@@ -68,7 +68,7 @@ const removeEnquiryTeamsUser = async (req, res) => {
         enquiry.teams = enquiry.teams.filter(member => member.user.toString() !== req.params.userId);
         await enquiry.save();
 
-        res.json({ success: true, message: 'User removed from team', enquiry });
+        res.json({ success: true, message: 'User removed from team' });
     } catch (error) {
         res.status(500).json({ success: false, message: 'Error removing user', error });
     }

@@ -7,9 +7,14 @@ To start typesense use the cmd
 docker run -p 8108:8108 -v //c/typesense-data:/data typesense/typesense:0.24.1 --data-dir=/data --api-key=type_sense_api_key_
 ```
 
-To start the app
+To start the app run these commands once
 ```
 npm install
+node utils/typesenseSetup.js
+node utils/syncMongoToTypesense.js
+```
+To run the app
+```
 npm run dev
 ```
 
